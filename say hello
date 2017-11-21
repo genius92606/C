@@ -1,0 +1,28 @@
+#include "stdlib.h"
+#include "stdio.h"
+#define COL 15
+int main()
+{
+	int i = 0;
+	int number;
+	scanf("%d", &number);
+	char **ptr2 = NULL;  //建立動態二維陣列
+	ptr2 = (char**)malloc(sizeof(char*)*number);    //給他ROW大小
+	for (i = 0; i < number; i++)
+		ptr2[i] = (char*)malloc(sizeof(char*)*COL);  //以及所有ROW的COL大小
+	for (int i = 0; i < number; i++)
+	{
+		scanf("%s", ptr2[i]);
+	}
+	for (int i = 0; i < number; i++)
+	{
+		printf("Hello, ");
+		printf("%s", ptr2[i]);
+		printf("!\n");
+	}
+	for (i = 0; i < number; i++)
+		free(ptr2[i]);      //釋放COL
+	free(ptr2);    //釋放ROW
+	system("pause");
+	return 0;
+}
