@@ -1,0 +1,24 @@
+strtok的應用～
+
+char *p;
+
+		p = strtok(, ","" "".");
+		if (p)   printf("%s\n", p);
+		for (;;)
+		{
+			p = strtok(NULL, ","" "".");
+			if (p&&*p != '\n')   printf("%s\n", p);
+			else     break;
+		}
+  
+  
+  這樣會使  abc.fjkle.dfad dkjkla kjek kkf,fjkl
+  變成
+  abc
+  fjkle
+  dfad
+  dkjkla
+  kjek
+  kkf
+  fjkl
+  
