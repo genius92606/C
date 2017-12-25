@@ -5,5 +5,5 @@ so we use fgets instead
 how to use it???
 
 char s[50];
-fgets(s,60,strin);
+fgets(s,strlen(s),strin);
 
