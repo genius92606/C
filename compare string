@@ -1,0 +1,7 @@
+can't use 
+
+if(string=="something");
+
+use
+
+if(strcmp(astring,"something)==0);
